@@ -1,7 +1,15 @@
 import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[] {1, 2, 3, 4, 2, 6, 7, 8, 9};
+        Scanner input = new Scanner(System.in);
+        System.out.println("Введите количество элементов массива");
+        int N = input.nextInt();
+        int[] array = new int[N];
+        for ( int i = 0; i < array.length; i++){
+            System.out.printf("Введите %d элемент массива ", i+1 );
+            array[i] = input.nextInt();
+        }
         System.out.println("Исходный массив");
         System.out.println(Arrays.toString(array));
         int low = array.length - 5;
